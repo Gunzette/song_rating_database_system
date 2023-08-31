@@ -1,0 +1,74 @@
+{
+    "albums": [
+        {
+            "name": "Test Album 1",
+            "artist": "Test Artist",
+            "release_year": 2000,
+            "album_average": 5.69,
+            "songs": [
+                {
+                    "name": "Test Song 1",
+                    "rating": {
+                        "average": 7.5,
+                        "musical": 10,
+                        "creative": 5,
+                        "catchy": 5
+                    }
+                },
+                {
+                    "name": "Test Song 2",
+                    "rating": {
+                        "average": 6.75,
+                        "musical": 5,
+                        "creative": 10,
+                        "catchy": 7
+                    }
+                },
+                {
+                    "name": "Test Song 2.5",
+                    "rating": {
+                        "average": 7.25,
+                        "musical": 9,
+                        "creative": 10,
+                        "catchy": 1
+                    }
+                },
+                {
+                    "name": "Test Song 2.75",
+                    "rating": {
+                        "average": 1.25,
+                        "musical": 1,
+                        "creative": 2,
+                        "catchy": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Test Album 2",
+            "artist": "Test Artist",
+            "release_year": 2052,
+            "album_average": 5.0,
+            "songs": [
+                {
+                    "name": "Test Song 3",
+                    "rating": {
+                        "average": 4.25,
+                        "musical": 2,
+                        "creative": 3,
+                        "catchy": 10
+                    }
+                },
+                {
+                    "name": "Test Song 4",
+                    "rating": {
+                        "average": 5.75,
+                        "musical": 4,
+                        "creative": 8,
+                        "catchy": 7
+                    }
+                }
+            ]
+        }
+    ]
+}
