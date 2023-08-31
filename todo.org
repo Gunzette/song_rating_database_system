@@ -4,4 +4,4 @@
 ** TODO: Create Tkinter input later
 *** TODO: Maybe html input???
 * TODO: add **Kwargs support to Album, Song and Rating classes
-* ? TODO: GitHub
+* DONE: Upload on Github
