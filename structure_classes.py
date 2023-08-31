@@ -1,5 +1,14 @@
 from statistics import mean
-from json import load, dump, JSONDecodeError
+from json import load, dump
+
+# Functions needed for the sort_abums_...() methods of Album_Container
+def get_release_year(album):
+    return album.release_year
+def get_artist(album):
+    return album.artist
+def get_average(album):
+    return album.calc_average()
+
 
 class Rating:
     def __init__(self, musical: int, creative: int, catchy: int):
@@ -98,10 +107,20 @@ class Album_Container:
         return ret_list
     
     def rebuild_songs(self, songlist: list[dict]):
+        # Rebuilds the Json song list into song objects
         ret_list = []
         for song in songlist:
             ret_list.append(Song(song["name"], Rating(song["rating"]["musical"], song["rating"]["creative"], song["rating"]["catchy"])))
         return ret_list
+
+
+    #Functions that sort the album list based on release year, artist or average
+    def sort_albums_by_release_year(self):
+        self.album_list.sort(key=get_release_year)
+    def sort_albums_by_artist(self):
+        self.album_list.sort(key=get_artist)
+    def sort_albums_by_average(self):
+        self.album_list.sort(key=get_average, reverse=True)
 
 
     def write_database(self) -> None:
