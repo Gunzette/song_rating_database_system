@@ -1,7 +1,8 @@
 from structure_classes import Rating, Song, Album, Album_Container
+import search_functions
 
 container = Album_Container()
 
-container.sort_albums_by_average()
+song1 = search_functions.search_song(container, "Test Song 2")
 
-container.write_database()
+print(song1.average)

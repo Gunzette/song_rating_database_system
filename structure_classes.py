@@ -59,19 +59,27 @@ class Album:
         self.release_year: int = release_year
 
         # Creates an Empty list if initialized without songs/adds all songs it is initialized with.
-        self.songlist: list[Song] = song_list
+        self.song_list: list[Song] = song_list
 
     def add_song(self, song: Song, placement: int=-1):
         # Adds a song. If no placement in the List is specified, it will be added at the end of the list.
         if placement == -1:
-            self.songlist.append(song)
+            self.song_list.append(song)
         elif placement > -1:
-            self.songlist.insert(placement, song)
+            self.song_list.insert(placement, song)
+
+    def remove_song(self, song_name):
+        for song_index in range(len(self.song_list)):
+            if self.song_list[song_index].name == song_name:
+                self.song_list.pop(song_index)
+                break
+        else:
+            print("The song name you entered was not in this album")
 
     def calc_average(self):
         # Gets a list of all song average scores
         song_averages = []
-        for song in self.songlist:
+        for song in self.song_list:
             song_averages.append(song.rating.avg)
 
         # Calculates the average of the averages and returns it.
@@ -85,7 +93,7 @@ class Album:
             "artist": self.artist,
             "release_year": self.release_year,
             "album_average": self.calc_average(),
-            "songs": [song.to_dict() for song in self.songlist]
+            "songs": [song.to_dict() for song in self.song_list]
         }
         return ret_dict
 

@@ -1,9 +1,9 @@
-* TODO: search functions for finding Albums/Songs by their title
 * TODO: Create commandline input
 ** TODO: Create Tkinter input later
 *** TODO: Maybe html input???
 * TODO: add **Kwargs support to Album, Song and Rating classes
 * TODO: Improve readme.md
 * TODO: Add a function that spits out all songs, ranked by rating
+* DONE: search functions for finding Albums/Songs by their title
 * DONE: Upload on Github
 * DONE: sort Albums by release date, artist or rating
